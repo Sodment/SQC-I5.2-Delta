@@ -1,10 +1,20 @@
 # SQC-I5.2-Delta
-#1 Sprint Soft Eng 2021/2022
+### #1 Sprint Soft Eng 2021/2022
+30.11-21.12
+
 ## Zespół projektowy:
 * [Paweł Koch 145330](https://github.com/Sodment) - Scrum Master, Developer
 * [Jędrzej Kościelniak 145260](https://github.com/Jedrek00) - Proxy Product Owner, Developer
 * [Bartłomiej Kowalewski 145204](https://github.com/KowalewskiBartlomiej) - Developer
 * [Mateusz Kozłowicz 145293](https://github.com/Koziok) - Developer
+
+## Linki:
+* [Punktowanie sprintów](https://docs.google.com/spreadsheets/d/e/2PACX-1vTn6j3M8pmGEzrsQk8mXse7lVHUdhYWkfxbkQiYI23rBtwM4N3bWw0qtupW-gesfCkcYasnZ-eEXl-F/pubhtml)
+* [Product Backlog](https://docs.google.com/spreadsheets/d/1KQWYdGdpLTtyjIRvr114zbILsQtIjT1orzXBFIRJocE/edit?usp=sharing)
+
+# Opis projektu
+### Scenario Quality Checker (SQC)
+Dla analityków dokumentujących wymagania funkcjonalne za pomocą scenariuszy nasza aplikacja SQC dostarczy informacji ilościowych oraz umożliwi wykrywanie problemów w wymaganiach funkcjonalnych zapisanych w postaci scenariuszy. Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu można ją zintegrować z istniejącymi narzędziami.
 
 # Notacja scenariuszy
 * Scenariusz zawiera nagłówek okreslający jego tytuł i aktorów (zewnętrznych oraz system)
