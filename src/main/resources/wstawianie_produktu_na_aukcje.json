@@ -1,0 +1,85 @@
+{
+    "title": "Wystawienie produktu na aukcję",
+    "actors": [
+      "sprzedający"
+    ],
+    "system actors": [
+      "system"
+    ],
+    "steps": [
+      {
+        "stepNum": 1,
+        "actor": "sprzedający",
+        "content": [
+          "Sprzedający zgłasza do systemu chęć wystawienia produktu na aukcję"
+        ],
+        "substeps": [],
+        "returnPath": []
+      },
+      {
+        "stepNum": 2,
+        "actor": "",
+        "content": [
+          "Wyświetla się formularz"
+        ],
+        "substeps": [],
+        "returnPath": []
+      },
+      {
+        "stepNum": 3,
+        "actor": "system",
+        "content": [
+          "System prosi o podanie danych produktu i ceny wywoławczej"
+        ],
+        "substeps": [],
+        "returnPath": []
+      },
+      {
+        "stepNum": 4,
+        "actor": "sprzedający",
+        "content": [
+          "Sprzedający podaje dane produktu oraz cenę wywoławczą"
+        ],
+        "substeps": [],
+        "returnPath": []
+      },
+      {
+        "stepNum": 5,
+        "actor": "sprzedający",
+        "content": [
+          "Sprzedający zatwierdza wprowadzone informacje"
+        ],
+        "substeps": [],
+        "returnPath": []
+      },
+      {
+        "stepNum": 6,
+        "actor": "system",
+        "content": [
+          "System weryfikuje poprawność danych"
+        ],
+        "substeps": [],
+        "returnPath": []
+      },
+      {
+        "stepNum": 7,
+        "actor": "",
+        "content": [
+          "IF",
+          "Podano poprawne dane"
+        ],
+        "substeps": [
+          {
+            "stepNum": 1,
+            "actor": "system",
+            "content": [
+              "System informuje o pomyślnym wystawieniu produktu na aukcję oraz wyświetla aktualną listę licytujących"
+            ],
+            "substeps": [],
+            "returnPath": []
+          }
+        ],
+        "returnPath": []
+      }
+    ]
+}
