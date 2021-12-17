@@ -1,18 +1,34 @@
 package pl.put.poznan.scenario.logic;
 
-/**
- * This is just an example to show that the logic should be outside the REST service.
- */
-public class JSONRead {
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-    private final String[] transforms;
+public class JSONRead
+{
+    private File getFileFromResources(String filename)
+    {
+        ClassLoader classLoader = getClass().getClassLoader();
 
-    public JSONRead(String[] transforms){
-        this.transforms = transforms;
+        URL resource = classLoader.getResource(filename);
+        if (resource == null) {
+            throw new IllegalArgumentException("File is not found!");
+        } else {
+            return new File(resource.getFile());
+        }
     }
-
-    public String transform(String text){
-        // of course, normally it would do something based on the transforms
-        return text.toUpperCase();
+    public String toString(String filename)
+    {
+        String filepath = getFileFromResources(filename + ".json").getPath();
+        String content = "";
+        try {
+            content = new String ( Files.readAllBytes( Paths.get(filepath) ) );
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content;
     }
 }
