@@ -1,5 +1,7 @@
 # SQC-I5.2-Delta
 ### #1 Sprint Soft Eng 2021/2022
+![example workflow](https://github.com/Sodment/SQC-I5.2-Delta/actions/workflows/ci.yml/badge.svg)
+
 30.11-21.12
 
 ## Zespół projektowy:
