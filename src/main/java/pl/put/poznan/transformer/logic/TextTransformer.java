@@ -2,6 +2,7 @@ package pl.put.poznan.transformer.logic;
 
 /**
  * Class description
+ *
  */
 public class TextTransformer {
 
