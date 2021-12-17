@@ -1,15 +1,15 @@
 {
     "title": "Wystawienie produktu na aukcję",
     "actors": [
-      "sprzedający"
+      "Sprzedający"
     ],
     "system actors": [
-      "system"
+      "System"
     ],
     "steps": [
       {
         "stepNum": 1,
-        "actor": "sprzedający",
+        "actor": "Sprzedający",
         "content": [
           "Sprzedający zgłasza do systemu chęć wystawienia produktu na aukcję"
         ],
@@ -27,7 +27,7 @@
       },
       {
         "stepNum": 3,
-        "actor": "system",
+        "actor": "System",
         "content": [
           "System prosi o podanie danych produktu i ceny wywoławczej"
         ],
@@ -36,7 +36,7 @@
       },
       {
         "stepNum": 4,
-        "actor": "sprzedający",
+        "actor": "Sprzedający",
         "content": [
           "Sprzedający podaje dane produktu oraz cenę wywoławczą"
         ],
@@ -45,7 +45,7 @@
       },
       {
         "stepNum": 5,
-        "actor": "sprzedający",
+        "actor": "Sprzedający",
         "content": [
           "Sprzedający zatwierdza wprowadzone informacje"
         ],
@@ -54,7 +54,7 @@
       },
       {
         "stepNum": 6,
-        "actor": "system",
+        "actor": "System",
         "content": [
           "System weryfikuje poprawność danych"
         ],
@@ -71,9 +71,9 @@
         "substeps": [
           {
             "stepNum": 1,
-            "actor": "system",
+            "actor": "System",
             "content": [
-              "System informuje o pomyślnym wystawieniu produktu na aukcję oraz wyświetla aktualną listę licytujących"
+              "System informuje o pomyślnym wystawieniu produktu na aukcję"
             ],
             "substeps": [],
             "returnPath": []
