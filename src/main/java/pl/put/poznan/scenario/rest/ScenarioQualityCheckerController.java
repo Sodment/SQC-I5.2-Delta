@@ -9,36 +9,37 @@ import java.util.Arrays;
 
 @RestController
 @RequestMapping("/{text}")
-public class = ScenarioQualityCheckerController {
+public class ScenarioQualityCheckerController {
 
     private static final Logger logger = LoggerFactory.getLogger(ScenarioQualityCheckerController.class);
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public String get(@PathVariable String text,
-                              @RequestParam(value="transforms", defaultValue="upper,escape") String[] transforms) {
+                      @RequestParam(value = "transforms", defaultValue = "upper,escape") String[] transforms) {
 
         // log the parameters
         logger.debug(text);
         logger.debug(Arrays.toString(transforms));
 
         // perform the transformation, you should run your logic here, below is just a silly example
-        JSONRead transformer = new JSONRead(transforms);
-        return transformer.transform(text);
+        //JSONRead transformer = new JSONRead(transforms);
+        //return transformer.transform(text);
+        return "tmp";
     }
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     public String post(@PathVariable String text,
-                      @RequestBody String[] transforms) {
+                       @RequestBody String[] transforms) {
 
         // log the parameters
         logger.debug(text);
         logger.debug(Arrays.toString(transforms));
 
         // perform the transformation, you should run your logic here, below is just a silly example
-        JSONRead transformer = new JSONRead(transforms);
-        return transformer.transform(text);
+        //JSONRead transformer = new JSONRead(transforms);
+        //return transformer.transform(text);
+        return "tmp";
     }
-
 
 
 }
