@@ -2,6 +2,10 @@ package pl.put.poznan.scenario.model;
 
 import java.util.List;
 
+
+/**
+ * Class to store scenario steps
+ */
 public class Step {
     private Integer stepNum;
     private String actor;
