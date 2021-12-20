@@ -13,6 +13,7 @@
 ## Linki:
 * [Punktowanie sprintów](https://docs.google.com/spreadsheets/d/e/2PACX-1vTn6j3M8pmGEzrsQk8mXse7lVHUdhYWkfxbkQiYI23rBtwM4N3bWw0qtupW-gesfCkcYasnZ-eEXl-F/pubhtml)
 * [Product Backlog](https://docs.google.com/spreadsheets/d/1KQWYdGdpLTtyjIRvr114zbILsQtIjT1orzXBFIRJocE/edit?usp=sharing)
+* [Dokumentacja](https://sodment.github.io/SQC-I5.2-Delta/index.html)
 
 # Opis projektu
 ### Scenario Quality Checker (SQC)
