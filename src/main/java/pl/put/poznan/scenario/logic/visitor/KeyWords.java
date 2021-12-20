@@ -18,6 +18,8 @@ public class KeyWords extends Visitor {
         }
     }
 
+    public void setStepsCount(long stepsCount) { this.stepsCount = stepsCount; }
+
     private static boolean isKeyWord(Step step) {
         List<String> text = step.getContent();
         return text.get(0).equals("IF") || text.get(0).equals("FOR EACH") || text.get(0).equals("ELSE");
