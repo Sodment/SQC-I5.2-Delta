@@ -59,5 +59,27 @@ public class ScenarioQualityCheckerController {
         return result;
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/no-actor-steps/{filename}")
+    public long countNoActors(@PathVariable String filename)
+    {
+        String json = new JSONRead().toString(filename);
+
+        if(json.equals("{}") || json.equals(""))
+            return 0;
+
+        Scenario scenario;
+        try {
+            scenario = JSONToObject.getObject(json);
+        }
+        catch (JsonSyntaxException e) {
+            return 0;
+        }
+
+        NoActors visitor = new NoActors();
+        scenario.acceptCounting(visitor);
+        long result = ((NoActors) visitor).getStepsCount();
+        visitor.setStepsCount(0);
+        return result;
+    }
 
 }
