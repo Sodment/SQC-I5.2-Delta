@@ -7,8 +7,6 @@ import pl.put.poznan.scenario.logic.visitor.*;
 import pl.put.poznan.scenario.model.*;
 import pl.put.poznan.scenario.logic.*;
 
-import java.util.Arrays;
-
 
 @RestController
 public class ScenarioQualityCheckerController {
