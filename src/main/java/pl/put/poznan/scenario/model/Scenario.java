@@ -1,5 +1,8 @@
 package pl.put.poznan.scenario.model;
 
+
+import pl.put.poznan.scenario.logic.visitor.KeyWords;
+
 import pl.put.poznan.scenario.logic.visitor.Visitor;
 
 import java.util.List;
@@ -43,5 +46,5 @@ public class Scenario {
     public List<Step> getSteps() { return steps; }
 
     public void setSteps(List<Step> steps) { this.steps = steps; }
-}
 
+}

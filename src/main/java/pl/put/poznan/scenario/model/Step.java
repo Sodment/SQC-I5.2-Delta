@@ -1,7 +1,6 @@
 package pl.put.poznan.scenario.model;
 
 import pl.put.poznan.scenario.logic.visitor.Visitor;
-
 import java.util.List;
 
 /**
@@ -23,46 +22,28 @@ public class Step {
         }
     }
 
-    public Step() {
-    }
 
-    public Integer getStepNumber() {
-        return stepNumber;
-    }
+    public Step() { }
 
-    public String getActor() {
-        return actor;
-    }
+    public Integer getStepNum() { return stepNumber; }
 
-    public List<String> getContent() {
-        return content;
-    }
+    public void setStepNum(Integer stepNum) { this.stepNumber = stepNum; }
+  
+    public String getActor() { return actor; }
+  
+    public void setActor(String actor) { this.actor = actor; }
+  
+    public List<String> getContent() { return content; }
 
-    public List<Step> getSubsteps() {
-        return substeps;
-    }
+    public void setContent(List<String> contentList) { this.content = contentList; }
 
-    public List<Integer> getReturnPath() {
-        return returnPath;
-    }
+    public List<Step> getSubsteps() { return substeps; }
+  
+    public void setSubsteps(List<Step> substeps) { this.substeps = substeps; }
 
-    public void setStepNumber(Integer stepNumber) {
-        this.stepNumber = stepNumber;
-    }
+    public List<Integer> getReturnPath() { return returnPath; }
+  
+    public void setReturnPath(List<Integer> returnPath) { this.returnPath = returnPath; }
 
-    public void setActor(String actor) {
-        this.actor = actor;
-    }
-
-    public void setContent(List<String> content) {
-        this.content = content;
-    }
-
-    public void setSubsteps(List<Step> substeps) {
-        this.substeps = substeps;
-    }
-
-    public void setReturnPath(List<Integer> returnPath) {
-        this.returnPath = returnPath;
-    }
+    
 }
