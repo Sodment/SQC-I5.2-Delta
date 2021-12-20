@@ -1,7 +1,7 @@
 {
-    "title": "Wystawienie produktu na aukcję",
+    "title": "Udział Kupującego w licytacji",
     "actors": [
-      "Sprzedający"
+      "Kupujący"
     ],
     "system actors": [
       "System"
@@ -9,9 +9,9 @@
     "steps": [
       {
         "stepNum": 1,
-        "actor": "Sprzedający",
+        "actor": "Kupujący",
         "content": [
-          "Sprzedający zgłasza do systemu chęć wystawienia produktu na aukcję"
+          "Kupujący zgłasza do systemu chęć wzięcia udziału w licytacji"
         ],
         "substeps": [],
         "returnPath": []
@@ -29,25 +29,25 @@
         "stepNum": 3,
         "actor": "System",
         "content": [
-          "System prosi o podanie danych produktu i ceny wywoławczej"
+          "System prosi o podanie danych Kupującego i kwoty"
         ],
         "substeps": [],
         "returnPath": []
       },
       {
         "stepNum": 4,
-        "actor": "Sprzedający",
+        "actor": "Kupujący",
         "content": [
-          "Sprzedający podaje dane produktu oraz cenę wywoławczą"
+          "Kupujący podaje swoje dane i kwotę"
         ],
         "substeps": [],
         "returnPath": []
       },
       {
         "stepNum": 5,
-        "actor": "Sprzedający",
+        "actor": "Kupujący",
         "content": [
-          "Sprzedający zatwierdza wprowadzone informacje"
+          "Kupujący zatwierdza wprowadzone informacje"
         ],
         "substeps": [],
         "returnPath": []
@@ -73,7 +73,7 @@
             "stepNum": 1,
             "actor": "System",
             "content": [
-              "System informuje o pomyślnym wystawieniu produktu na aukcję"
+              "System informuje o pomyślnym wzięciu udziału w licytacji"
             ],
             "substeps": [],
             "returnPath": []

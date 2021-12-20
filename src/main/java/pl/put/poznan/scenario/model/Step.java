@@ -1,9 +1,7 @@
 package pl.put.poznan.scenario.model;
 
 import pl.put.poznan.scenario.logic.visitor.Visitor;
-
 import java.util.List;
-
 
 /**
  * Klasa reprezentuje pojedynczy krok w scenariuszu
@@ -24,22 +22,28 @@ public class Step {
         }
     }
 
+
     public Step() { }
 
     public Integer getStepNum() { return stepNumber; }
 
     public void setStepNum(Integer stepNum) { this.stepNumber = stepNum; }
-
+  
     public String getActor() { return actor; }
-
+  
     public void setActor(String actor) { this.actor = actor; }
-
+  
     public List<String> getContent() { return content; }
 
     public void setContent(List<String> contentList) { this.content = contentList; }
 
-    public List<Integer> getReturnPath() { return returnPath; }
+    public List<Step> getSubsteps() { return substeps; }
+  
+    public void setSubsteps(List<Step> substeps) { this.substeps = substeps; }
 
+    public List<Integer> getReturnPath() { return returnPath }
+  
     public void setReturnPath(List<Integer> returnPath) { this.returnPath = returnPath; }
 
+    
 }
