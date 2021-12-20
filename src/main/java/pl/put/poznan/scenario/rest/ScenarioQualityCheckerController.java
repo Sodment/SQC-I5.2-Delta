@@ -10,8 +10,6 @@ import pl.put.poznan.scenario.logic.*;
 @RestController
 public class ScenarioQualityCheckerController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ScenarioQualityCheckerController.class);
-
     @RequestMapping(method = RequestMethod.GET, path = "/all-steps/{filename}")
     public long countAllSteps(@PathVariable String filename)
     {
