@@ -7,10 +7,20 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Odpowiada za zapis danych do pliku JSON.
+ *
+ */
 public class JSONWrite {
 
     final static  String path = "src/main/resources/";
 
+    /**
+     * Zapisuje dane do pliku JSON.
+     *
+     * @param scenario nazwa scenariusza
+     * @param name nazwa pliku
+     */
     public static void writeScenarioToFile(Scenario scenario, String name)
     {
         Gson gson = new Gson();
