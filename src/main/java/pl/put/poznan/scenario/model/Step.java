@@ -41,7 +41,7 @@ public class Step {
   
     public void setSubsteps(List<Step> substeps) { this.substeps = substeps; }
 
-    public List<Integer> getReturnPath() { return returnPath }
+    public List<Integer> getReturnPath() { return returnPath; }
   
     public void setReturnPath(List<Integer> returnPath) { this.returnPath = returnPath; }
 
