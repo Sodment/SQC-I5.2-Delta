@@ -7,6 +7,10 @@ import pl.put.poznan.scenario.logic.visitor.*;
 import pl.put.poznan.scenario.model.*;
 import pl.put.poznan.scenario.logic.*;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 @RestController
 public class ScenarioQualityCheckerController {
 
@@ -57,26 +61,26 @@ public class ScenarioQualityCheckerController {
         return result;
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/no-actor-steps/{filename}")
-    public long countNoActors(@PathVariable String filename)
+    @RequestMapping(method = RequestMethod.GET, path = "/no-actors/{filename}")
+    public List<String> countNoActors(@PathVariable String filename)
     {
         String json = new JSONRead().toString(filename);
 
         if(json.equals("{}") || json.equals(""))
-            return 0;
+            return Collections.emptyList();
 
         Scenario scenario;
         try {
             scenario = JSONToObject.getObject(json);
         }
         catch (JsonSyntaxException e) {
-            return 0;
+            return Collections.emptyList();
         }
 
         NoActors visitor = new NoActors();
         scenario.acceptCounting(visitor);
-        long result = ((NoActors) visitor).getStepsCount();
-        visitor.setStepsCount(0);
+        ArrayList<String> result = visitor.getStepsWithoutActors();
+        visitor.setStepsCount(new ArrayList<String>());
         return result;
     }
 
