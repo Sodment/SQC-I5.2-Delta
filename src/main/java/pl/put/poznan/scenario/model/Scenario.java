@@ -1,5 +1,7 @@
 package pl.put.poznan.scenario.model;
 
+import pl.put.poznan.scenario.logic.visitor.Visitor;
+
 import java.util.List;
 
 public class Scenario {
@@ -7,6 +9,14 @@ public class Scenario {
     private List<String> actors;
     private List<String> system_actors;
     private List<Step> steps;
+
+    public void acceptCounting(Visitor visitor)
+    {
+        for(Step step : steps)
+        {
+            step.acceptCounting(visitor);
+        }
+    }
 
     public Scenario() { }
 

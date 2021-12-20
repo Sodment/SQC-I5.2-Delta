@@ -1,5 +1,7 @@
 package pl.put.poznan.scenario.model;
 
+import pl.put.poznan.scenario.logic.visitor.Visitor;
+
 import java.util.List;
 
 /**
@@ -11,6 +13,15 @@ public class Step {
     private List<String> content;
     private List<Step> substeps;
     private List<Integer> returnPath;
+
+    public void acceptCounting(Visitor visitor)
+    {
+        visitor.count(this);
+        if(!this.substeps.isEmpty())
+        {
+            for(Step step : substeps) { step.acceptCounting(visitor); }
+        }
+    }
 
     public Step() {
     }
