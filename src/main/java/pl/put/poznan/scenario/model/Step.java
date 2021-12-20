@@ -2,9 +2,6 @@ package pl.put.poznan.scenario.model;
 
 import java.util.List;
 
-/**
- * Klasa reprezentuje pojedynczy krok w scenariuszu
- */
 public class Step {
     private Integer stepNumber;
     private String actor;
