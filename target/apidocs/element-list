@@ -1,0 +1,5 @@
+pl.put.poznan.scenario.app
+pl.put.poznan.scenario.logic
+pl.put.poznan.scenario.logic.visitor
+pl.put.poznan.scenario.model
+pl.put.poznan.scenario.rest
