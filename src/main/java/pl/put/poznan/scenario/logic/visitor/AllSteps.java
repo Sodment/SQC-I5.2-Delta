@@ -7,5 +7,7 @@ public class AllSteps extends Visitor{
 
     public long getStepsCount() {return stepsCount;}
 
+    public void setStepsCount(long stepsCount) { this.stepsCount = stepsCount; }
+
     public void count(Step step) { stepsCount++; }
 }
