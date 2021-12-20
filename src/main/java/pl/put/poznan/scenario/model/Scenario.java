@@ -7,12 +7,19 @@ import pl.put.poznan.scenario.logic.visitor.Visitor;
 
 import java.util.List;
 
+/**
+ * Klasa przechowująca dane o scenariuszu.
+ *
+ */
 public class Scenario {
     private String title;
     private List<String> actors;
     private List<String> system_actors;
     private List<Step> steps;
 
+    /**
+     * @param visitor obiekt klasy Visitor
+     */
     public void acceptCounting(Visitor visitor)
     {
         for(Step step : steps)

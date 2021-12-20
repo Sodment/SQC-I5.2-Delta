@@ -6,8 +6,17 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * Odpowiada za odczyt danych z pliku JSON.
+ *
+ */
 public class JSONRead
 {
+    /**
+     * Odpowiada za pobranie pliku z folderu 'resources'.
+     * @param filename nazwa pliku
+     * @return odpowiedni obiekt JSON z folderu 'resources'
+     */
     private File getFileFromResources(String filename)
     {
         ClassLoader classLoader = getClass().getClassLoader();
@@ -19,6 +28,13 @@ public class JSONRead
             return new File(resource.getFile());
         }
     }
+
+    /**
+     * Transformuje plik JSON do obiektu typu String.
+     *
+     * @param filename nazwa pliku
+     * @return powstały z pliku JSON obiekt String
+     */
     public String toString(String filename)
     {
         String filepath = getFileFromResources(filename + ".json").getPath();
