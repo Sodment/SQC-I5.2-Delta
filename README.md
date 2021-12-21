@@ -4,6 +4,9 @@
 
 30.11-21.12
 
+### #2 Sprint Soft Eng 2021/2022
+21.12-25.01
+
 ## Zespół projektowy:
 * [Paweł Koch 145330](https://github.com/Sodment) - Scrum Master, Developer
 * [Jędrzej Kościelniak 145260](https://github.com/Jedrek00) - Proxy Product Owner, Developer
