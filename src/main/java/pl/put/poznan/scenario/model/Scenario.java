@@ -33,13 +33,13 @@ public class Scenario {
     public void acceptDisplaying(DisplayingVisitor visitor)
     {
         if(visitor instanceof ScenarioViewer)
-            ((ScenarioViewer)visitor).setScenarioText(this.title);
+            ((ScenarioViewer)visitor).setScenarioText(this.title + "\n");
         if(visitor instanceof LevelViewer)
-            ((LevelViewer)visitor).setScenarioText(this.title);
+            ((LevelViewer)visitor).setScenarioText(this.title + "\n");
         int counter = 0;
         for(Step step : steps)
         {
-            step.acceptDisplaying(visitor, String.valueOf(counter), 0, false);
+            step.acceptDisplaying(visitor, String.valueOf(counter), 0);
             counter++;
         }
     }
