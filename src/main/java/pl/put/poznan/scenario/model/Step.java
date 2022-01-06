@@ -26,12 +26,15 @@ public class Step {
 
     public void acceptDisplaying(DisplayingVisitor visitor, String num, int level)
     {
-        num += "<strong>" + this.stepNumber + ".</strong>";
+        int counter;
         visitor.display(this, num, level);
         if(!this.substeps.isEmpty()) {
             level++;
-            for (Step step : substeps)
-                step.acceptDisplaying(visitor, num, level);
+            counter = 1;
+            for (Step step : substeps) {
+                step.acceptDisplaying(visitor, num + String.valueOf(counter) + ".", level);
+                counter++;
+            }
         }
     }
 

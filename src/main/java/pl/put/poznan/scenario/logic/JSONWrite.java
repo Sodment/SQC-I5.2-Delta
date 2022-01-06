@@ -21,7 +21,7 @@ public class JSONWrite {
      * @param scenario nazwa scenariusza
      * @param name nazwa pliku
      */
-    public static void writeScenarioToFile(Scenario scenario, String name)
+    public static String writeScenarioToFile(Scenario scenario, String name)
     {
         Gson gson = new Gson();
         String jString = gson.toJson(scenario);
@@ -34,6 +34,8 @@ public class JSONWrite {
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
+            return "Nie udalo zapisac sie scenariusza do pliku!";
         }
+        return "Scenariusz zapisany do pliku!";
     }
 }

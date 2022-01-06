@@ -4,6 +4,8 @@ package pl.put.poznan.scenario.model;
 import pl.put.poznan.scenario.logic.visitor.CountingVisitor;
 import pl.put.poznan.scenario.logic.visitor.DisplayingVisitor;
 import pl.put.poznan.scenario.logic.visitor.LevelViewer;
+import pl.put.poznan.scenario.logic.visitor.ScenarioViewer;
+
 
 import java.util.List;
 
@@ -30,11 +32,15 @@ public class Scenario {
 
     public void acceptDisplaying(DisplayingVisitor visitor)
     {
+        if(visitor instanceof ScenarioViewer)
+            ((ScenarioViewer)visitor).setScenarioText(this.title + "\n");
         if(visitor instanceof LevelViewer)
-            ((LevelViewer)visitor).setScenarioText("<strong>" + this.title + "</strong></br></br>");
+            ((LevelViewer)visitor).setScenarioText(this.title + "\n");
+        int counter = 1;
         for(Step step : steps)
         {
-            step.acceptDisplaying(visitor, "", 0);
+            step.acceptDisplaying(visitor, String.valueOf(counter) + ".", 0);
+            counter++;
         }
     }
 
