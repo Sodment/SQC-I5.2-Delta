@@ -1,6 +1,8 @@
 package pl.put.poznan.scenario.model;
 
 import pl.put.poznan.scenario.logic.visitor.CountingVisitor;
+import pl.put.poznan.scenario.logic.visitor.DisplayingVisitor;
+
 import java.util.List;
 
 /**
@@ -19,6 +21,17 @@ public class Step {
         if(!this.substeps.isEmpty())
         {
             for(Step step : substeps) { step.acceptCounting(countingVisitor); }
+        }
+    }
+
+    public void acceptDisplaying(DisplayingVisitor visitor, String num, int level)
+    {
+        num += "<strong>" + this.stepNumber + ".</strong>";
+        visitor.display(this, num, level);
+        if(!this.substeps.isEmpty()) {
+            level++;
+            for (Step step : substeps)
+                step.acceptDisplaying(visitor, num, level);
         }
     }
 

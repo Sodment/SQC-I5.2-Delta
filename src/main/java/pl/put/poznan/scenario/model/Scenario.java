@@ -2,6 +2,8 @@ package pl.put.poznan.scenario.model;
 
 
 import pl.put.poznan.scenario.logic.visitor.CountingVisitor;
+import pl.put.poznan.scenario.logic.visitor.DisplayingVisitor;
+import pl.put.poznan.scenario.logic.visitor.LevelViewer;
 
 import java.util.List;
 
@@ -23,6 +25,16 @@ public class Scenario {
         for(Step step : steps)
         {
             step.acceptCounting(countingVisitor);
+        }
+    }
+
+    public void acceptDisplaying(DisplayingVisitor visitor)
+    {
+        if(visitor instanceof LevelViewer)
+            ((LevelViewer)visitor).setScenarioText("<strong>" + this.title + "</strong></br></br>");
+        for(Step step : steps)
+        {
+            step.acceptDisplaying(visitor, "", 0);
         }
     }
 
