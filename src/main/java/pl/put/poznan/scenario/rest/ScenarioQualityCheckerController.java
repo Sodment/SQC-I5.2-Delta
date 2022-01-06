@@ -84,4 +84,24 @@ public class ScenarioQualityCheckerController {
         return result;
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/show-scenario/{level}/{filename}")
+    public String showLevelScenario(@PathVariable String filename, @PathVariable int level)
+    {
+        String json = new JSONRead().toString(filename);
+
+        Scenario scenario;
+        try {
+            scenario = JSONToObject.getObject(json);
+        }
+        catch (JsonSyntaxException e) {
+            return "Błędna struktura scenariusza.";
+        }
+
+        LevelViewer visitor = new LevelViewer(level);
+        scenario.acceptDisplaying(visitor);
+        String result = visitor.getScenarioText();
+        visitor.setScenarioText("");
+        return result;
+    }
+
 }

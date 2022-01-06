@@ -8,7 +8,7 @@ import java.util.List;
  * Zlicza liczbę kroków zawierających słowa kluczowe.
  * Dziedziczy po abstrakcyjnej klasie implementując wzorzec projektowy 'wizytator'.
  */
-public class KeyWords extends Visitor {
+public class KeyWords extends CountingVisitor {
     private long stepsCount = 0;
 
     public long getStepsCount() {

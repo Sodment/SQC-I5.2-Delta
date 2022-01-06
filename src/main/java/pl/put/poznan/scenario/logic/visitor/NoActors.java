@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Przechowuje kroki niezawierające aktorów.
  * Dziedziczy po abstrakcyjnej klasie implementując wzorzec projektowy 'wizytator'.
  */
-public class NoActors extends Visitor{
+public class NoActors extends CountingVisitor {
 
     private ArrayList<String> stepsWithoutActors = new ArrayList<>();
 
