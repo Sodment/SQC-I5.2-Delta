@@ -30,9 +30,9 @@ public class Step {
         visitor.display(this, num, level);
         if(!this.substeps.isEmpty()) {
             level++;
-            counter = 0;
+            counter = 1;
             for (Step step : substeps) {
-                step.acceptDisplaying(visitor, num + String.valueOf(counter), level);
+                step.acceptDisplaying(visitor, num + String.valueOf(counter) + ".", level);
                 counter++;
             }
         }
