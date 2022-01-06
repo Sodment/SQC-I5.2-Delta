@@ -104,4 +104,30 @@ public class ScenarioQualityCheckerController {
         return result;
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/show-scenario/{filename}")
+    public String showScenario(@PathVariable String filename, @PathVariable int level)
+    {
+        String json = new JSONRead().toString(filename);
+
+        Scenario scenario;
+        try {
+            scenario = JSONToObject.getObject(json);
+        }
+        catch (JsonSyntaxException e) {
+            return "Błędna struktura scenariusza.";
+        }
+
+        ScenarioViewer visitor = new ScenarioViewer();
+        scenario.acceptDisplaying(visitor);
+        String result = visitor.getScenarioText();
+        visitor.setScenarioText("");
+        return result;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = "/save-scenario/{title}")
+    public String saveScenario(@PathVariable String title, @RequestBody Scenario scenario)
+    {
+        return JSONWrite.writeScenarioToFile(scenario, title);
+    }
+
 }
