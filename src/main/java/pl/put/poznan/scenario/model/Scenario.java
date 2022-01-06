@@ -36,9 +36,11 @@ public class Scenario {
             ((ScenarioViewer)visitor).setScenarioText(this.title);
         if(visitor instanceof LevelViewer)
             ((LevelViewer)visitor).setScenarioText(this.title);
+        int counter = 0;
         for(Step step : steps)
         {
-            step.acceptDisplaying(visitor, step.getStepNum().toString(), 0);
+            step.acceptDisplaying(visitor, String.valueOf(counter), 0, false);
+            counter++;
         }
     }
 

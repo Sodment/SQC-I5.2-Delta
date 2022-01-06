@@ -24,14 +24,15 @@ public class Step {
         }
     }
 
-    public void acceptDisplaying(DisplayingVisitor visitor, String num, int level)
+    public void acceptDisplaying(DisplayingVisitor visitor, String num, int level, boolean parent)
     {
-        num += this.stepNumber;
+        if(parent)
+            num += this.stepNumber;
         visitor.display(this, num, level);
         if(!this.substeps.isEmpty()) {
             level++;
             for (Step step : substeps)
-                step.acceptDisplaying(visitor, num, level);
+                step.acceptDisplaying(visitor, num, level, true);
         }
     }
 
