@@ -1,9 +1,7 @@
 package pl.put.poznan.scenario.model;
 
 
-import pl.put.poznan.scenario.logic.visitor.KeyWords;
-
-import pl.put.poznan.scenario.logic.visitor.Visitor;
+import pl.put.poznan.scenario.logic.visitor.CountingVisitor;
 
 import java.util.List;
 
@@ -18,13 +16,13 @@ public class Scenario {
     private List<Step> steps;
 
     /**
-     * @param visitor obiekt klasy Visitor
+     * @param countingVisitor obiekt klasy Visitor
      */
-    public void acceptCounting(Visitor visitor)
+    public void acceptCounting(CountingVisitor countingVisitor)
     {
         for(Step step : steps)
         {
-            step.acceptCounting(visitor);
+            step.acceptCounting(countingVisitor);
         }
     }
 

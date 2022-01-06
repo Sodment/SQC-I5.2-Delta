@@ -6,7 +6,7 @@ import pl.put.poznan.scenario.model.Step;
  * Zlicza wszystkie kroki w scenariuszu.
  * Dziedziczy po abstrakcyjnej klasie implementując wzorzec projektowy 'wizytator'.
  */
-public class AllSteps extends Visitor{
+public class AllSteps extends CountingVisitor {
     private long stepsCount = 0;
 
 
