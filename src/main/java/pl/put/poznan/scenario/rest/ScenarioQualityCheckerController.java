@@ -84,6 +84,30 @@ public class ScenarioQualityCheckerController {
         return result;
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/count-actors/{filename}")
+    public String countActors(@PathVariable String filename)
+    {
+        String json = new JSONRead().toString(filename);
+
+        if(json.equals("{}") || json.equals(""))
+            return "";
+
+        Scenario scenario;
+        try {
+            scenario = JSONToObject.getObject(json);
+        }
+        catch (JsonSyntaxException e) {
+            return "";
+        }
+
+        CountActors visitor = new CountActors();
+        scenario.acceptCounting(visitor);
+        String result = visitor.getActors();
+        visitor.setNumberOfActors(0);
+        visitor.setNumberOfSystemActors(0);
+        return result;
+    }
+
     @RequestMapping(method = RequestMethod.GET, path = "/show-scenario/{level}/{filename}")
     public String showLevelScenario(@PathVariable String filename, @PathVariable int level)
     {
