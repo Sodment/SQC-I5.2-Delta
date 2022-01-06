@@ -30,6 +30,10 @@ public class Scenario {
         }
     }
 
+
+    /**
+     * @param visitor obiekt klasy Visitor
+     */
     public void acceptDisplaying(DisplayingVisitor visitor)
     {
         if(visitor instanceof ScenarioViewer)

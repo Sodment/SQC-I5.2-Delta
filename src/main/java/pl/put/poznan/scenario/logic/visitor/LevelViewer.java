@@ -2,6 +2,10 @@ package pl.put.poznan.scenario.logic.visitor;
 
 import pl.put.poznan.scenario.model.Step;
 
+/**
+ * Wyświetla listę kroków z uwzględnieniem numeru kroku i zagłębienia.
+ * Dziedziczy po abstrakcyjnej klasie implementując wzorzec projektowy 'wizytator'.
+ */
 public class LevelViewer extends DisplayingVisitor{
     private String scenarioText = "";
     private int desiredLevel = 0;
@@ -16,6 +20,13 @@ public class LevelViewer extends DisplayingVisitor{
 
     public void setDesiredLevel(int desiredLevel) { this.desiredLevel = desiredLevel; }
 
+    /**
+     * Wyświetla krok z uwzględnieniem numeru kroku i zagłębienia.
+     *
+     * @param step Obecnie rozpatrywany krok
+     * @param parentNum numer kroku nadrzędnego
+     * @param level poziom zagłębienia kroku
+     */
     @Override
     public void display(Step step, String parentNum, int level)
     {
