@@ -26,7 +26,7 @@ public class Step {
 
     public void acceptDisplaying(DisplayingVisitor visitor, String num, int level)
     {
-        num += "<strong>" + this.stepNumber + ".</strong>";
+        num += this.stepNumber;
         visitor.display(this, num, level);
         if(!this.substeps.isEmpty()) {
             level++;

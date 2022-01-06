@@ -105,7 +105,7 @@ public class ScenarioQualityCheckerController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/show-scenario/{filename}")
-    public String showScenario(@PathVariable String filename, @PathVariable int level)
+    public String showScenario(@PathVariable String filename)
     {
         String json = new JSONRead().toString(filename);
 

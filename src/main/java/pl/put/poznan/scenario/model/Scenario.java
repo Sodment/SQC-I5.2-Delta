@@ -33,12 +33,12 @@ public class Scenario {
     public void acceptDisplaying(DisplayingVisitor visitor)
     {
         if(visitor instanceof ScenarioViewer)
-            ((ScenarioViewer)visitor).setScenarioText("<strong>" + this.title + "</strong></br></br>");
+            ((ScenarioViewer)visitor).setScenarioText(this.title);
         if(visitor instanceof LevelViewer)
-            ((LevelViewer)visitor).setScenarioText("<strong>" + this.title + "</strong></br></br>");
+            ((LevelViewer)visitor).setScenarioText(this.title);
         for(Step step : steps)
         {
-            step.acceptDisplaying(visitor, "", 0);
+            step.acceptDisplaying(visitor, step.getStepNum().toString(), 0);
         }
     }
 
