@@ -3,12 +3,17 @@ package pl.put.poznan.scenario.test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.configuration.IMockitoConfiguration;
+import pl.put.poznan.scenario.logic.visitor.DisplayingVisitor;
+import pl.put.poznan.scenario.logic.visitor.ScenarioViewer;
 import pl.put.poznan.scenario.model.Scenario;
 import pl.put.poznan.scenario.model.Step;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class ScenarioTest {
 
