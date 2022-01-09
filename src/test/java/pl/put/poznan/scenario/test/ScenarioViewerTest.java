@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import pl.put.poznan.scenario.logic.visitor.ScenarioViewer;
 import pl.put.poznan.scenario.model.Step;
 
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,10 +16,10 @@ class ScenarioViewerTest {
     @Test
     void display() {
         Step mockObject = mock(Step.class);
-        when(mockObject.getContent()).thenReturn(List.of("IF"));
+        when(mockObject.getContent()).thenReturn(Collections.emptyList());
         ScenarioViewer testedObject = new ScenarioViewer();
 
         testedObject.display(mockObject, "1", 1);
-        assertEquals(testedObject.getScenarioText(), "- - 01 IF ");
+        assertEquals(testedObject.getScenarioText(), "- - 01 ");
     }
 }
