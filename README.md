@@ -5,6 +5,7 @@
 30.11-21.12
 
 ### #2 Sprint Soft Eng 2021/2022
+![example workflow](https://github.com/Sodment/SQC-I5.2-Delta/actions/workflows/ci.yml/badge.svg)
 21.12-25.01
 
 ## Zespół projektowy:
