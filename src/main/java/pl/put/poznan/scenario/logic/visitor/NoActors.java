@@ -32,7 +32,7 @@ public class NoActors extends CountingVisitor {
      * @param step Obecnie rozpatrywany krok
      * @return zwraca prawdę, jeżeli krok zawiera aktora
      */
-    private boolean isActor(Step step) {
+    public boolean isActor(Step step) {
         if (!step.getActor().equals(""))
         {
             return true;
