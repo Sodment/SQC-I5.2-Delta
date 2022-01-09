@@ -28,9 +28,9 @@ public class ScenarioViewer extends DisplayingVisitor{
             scenarioText += "- - " + step.getStepNum();
         scenarioText += parentNum + " ";
         for(int i=0; i < step.getContent().size(); i++)
-            scenarioText += step.getContent().get(i) + " ";
+            scenarioText += step.getContent().get(i) + "\n";
         scenarioText = scenarioText.replaceAll("<[^>]*>", "");
-        scenarioText = scenarioText.replaceAll("null.", "");
+        scenarioText = scenarioText.replaceAll("null", "");
         System.out.println(scenarioText);
     }
 }

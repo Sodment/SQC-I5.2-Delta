@@ -32,6 +32,7 @@ public class Scenario {
 
 
     /**
+     * Pozwala na wyswietlanie odpowiednich wartosci przez wizytatora
      * @param visitor obiekt klasy Visitor
      */
     public void acceptDisplaying(DisplayingVisitor visitor)
@@ -43,7 +44,7 @@ public class Scenario {
         int counter = 1;
         for(Step step : steps)
         {
-            step.acceptDisplaying(visitor, String.valueOf(counter) + ".", 0);
+            step.acceptDisplaying(visitor, counter + ".", 0);
             counter++;
         }
     }
