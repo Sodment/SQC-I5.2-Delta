@@ -35,7 +35,7 @@ public class KeyWords extends CountingVisitor {
      * @param step Obecnie rozpatrywany krok
      * @return zwraca prawdę, gdy krok zawiera słowo kluczowe
      */
-    private static boolean isKeyWord(Step step) {
+    public static boolean isKeyWord(Step step) {
         List<String> text = step.getContent();
         return text.get(0).equals("IF") || text.get(0).equals("FOR EACH") || text.get(0).equals("ELSE");
     }
